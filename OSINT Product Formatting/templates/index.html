@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+      form {
+        display:grid;
+        grid-template-columns: max-content max-content;
+        grid-gap:5px;
+      }
+      form label       { text-align:right; }
+      form label:after { content: ":"; }
+    </style>
+  </head>
+  <form action="/">
+    <label>Name</label>
+    <input type="text" list="name" name="name"/>
+    <datalist id="name" name="name">
+      <option>Bloomberg</option>
+      <option>DW</option>
+      <option>Al Jazeera</option>
+    </datalist>
+
+    <label>Link</label>
+    <input type="text" name="link"></input>
+
+    <label>Citation Format</label>
+    <select name="citation_format">
+      <option value="KT">KT</option>
+      <option value="GoASR">GoASR</option>
+      <option value="SIGACT">SIGACT</option>
+    </select>
+
+    <label>Text</label>
+    <input type="text" name="text"></input>
+
+    <label>UID</label>
+    <input type="text" name="uid"></input>
+
+    <label>DNGTS?</label>
+    <select name="dngts_option">
+      <option value="n">It's fine</option>
+      <option value="y">Don't go</option>
+    </select>
+
+    <label>Article Date</label>
+    <input type="text" name="article_date" placeholder="YYYY-MM-DD"></input>
+
+    <input type="submit" value="Create Citation"></input>
+  </form>
+  {{citation}}
+</html>
